@@ -73,7 +73,8 @@ body {
 /* A elements that don't have a class get default styles */
 a:not([class]) {
   text-decoration: none;
-  text-decoration-skip-ink: auto;
+  -webkit-text-decoration-skip: ink;
+          text-decoration-skip-ink: auto;
 }
 
 /* Make images easier to work with */
@@ -215,7 +216,9 @@ section {
 .navbar .navbar-container .menu-items li a {
   text-decoration: none;
   color: var(--body-color);
+  transition: -webkit-text-decoration 0.2s ease-out;
   transition: text-decoration 0.2s ease-out;
+  transition: text-decoration 0.2s ease-out, -webkit-text-decoration 0.2s ease-out;
 }
 .navbar .navbar-container .menu-items li::after {
   content: "";
@@ -319,6 +322,7 @@ section {
   font-size: 13vw;
   font-family: var(--ff-heading);
   line-height: 0.9;
+  width: -moz-min-content;
   width: min-content;
   overflow: hidden;
 }
@@ -331,7 +335,8 @@ section {
   border: 0.5px solid var(--primary-color);
 }
 .hero .container .hero-img img {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   position: absolute;
   overflow: hidden;
   height: 100%;
@@ -435,6 +440,7 @@ section {
   font-size: var(--secondary-heading);
   border: 1px solid var(--primary-color);
   border-radius: 20px;
+  height: -moz-fit-content;
   height: fit-content;
   padding: 1em;
 }
@@ -451,7 +457,8 @@ section {
 }
 .classes .container .class-grid .class-1 img,
 .classes .container .class-grid .class-5 img {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   position: absolute;
   overflow: hidden;
   height: 100%;
@@ -483,7 +490,8 @@ section {
     border: 0.5px solid var(--primary-color);
   }
   .class-grid .class-4 img {
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
     position: absolute;
     overflow: hidden;
     height: 100%;
@@ -513,7 +521,8 @@ section {
 }
 .workout-trainers .container .training-vid .trainer-vid img {
   border: 0.5px solid var(--primary-color);
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 20px;
   position: absolute;
   overflow: hidden;
@@ -566,7 +575,8 @@ section {
   transition: 0.5s ease-out;
 }
 .blog-sec .container .blogs .blog .blog-img img {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   position: absolute;
   overflow: hidden;
   height: 100%;
@@ -654,7 +664,8 @@ section {
   border: 0.5px solid var(--primary-color);
 }
 .socials .container .grid .left-sec .socials-img img {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   position: absolute;
   overflow: hidden;
   height: 100%;
@@ -706,6 +717,7 @@ section {
   border-right: 1px solid var(--body-color);
   align-items: flex-start;
   justify-content: space-between;
+  width: -moz-fit-content;
   width: fit-content;
   padding: 3em 0;
 }
@@ -782,6 +794,7 @@ section {
   flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
+  width: -moz-fit-content;
   width: fit-content;
   gap: 7em;
 }
@@ -795,6 +808,7 @@ section {
   font-size: var(--link-text);
   text-transform: capitalize;
   margin-bottom: 1em;
+  width: -moz-fit-content;
   width: fit-content;
   cursor: pointer;
   position: relative;
